@@ -1,0 +1,42 @@
+@use "../../styles/variables" as *;
+
+.textareaWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $zenith-spacing-md;
+}
+
+.textarea {
+  padding: $zenith-spacing-sm;
+  border: 1px solid $zenith-color-secondary;
+  border-radius: $zenith-border-radius;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  min-height: 100px;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $zenith-color-primary;
+    box-shadow: 0 0 0 1px $zenith-color-primary;
+  }
+}
+
+.errorTextarea {
+  border-color: #dc3545 !important;
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: $zenith-spacing-xs;
+  font-family: "Inter", sans-serif;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: $zenith-spacing-xs;
+  color: $zenith-color-text;
+  font-family: "Inter", sans-serif;
+}
