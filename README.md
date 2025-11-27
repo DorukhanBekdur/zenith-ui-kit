@@ -40,7 +40,6 @@ Install Zenith UI using npm or yarn:
     ```bash
     npm install
     # or yarn
-
     ```
 
 ## 🧩 Component Showcase
