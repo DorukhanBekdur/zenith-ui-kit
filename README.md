@@ -1,16 +1,66 @@
-# React + Vite
+# ⚛️ Zenith UI: A Modern Component Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Last Commit](https://img.shields.io/github/last-commit/[ZENITH_UI_REPO_USER]/[ZENITH_UI_REPO])](https://github.com/[ZENITH_UI_REPO_USER]/[ZENITH_UI_REPO]/commits/main)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/[ZENITH_UI_REPO_USER]/[ZENITH_UI_REPO]/blob/main/LICENSE)
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/-REACT-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/-TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/-SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
+  <img src="https://img.shields.io/badge/-VITE-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/-STORYBOOK-FF4785?style=for-the-badge&logo=storybook&logoColor=white" />
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/DESIGN%20SYSTEM-000000?style=for-the-badge&labelColor=333333&color=A020F0" />
+  <img src="https://img.shields.io/badge/ACCESSIBILITY-000000?style=for-the-badge&labelColor=333333&color=008080" />
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🔥 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This is a comprehensive and modern User Interface (UI) component library, Zenith UI, designed to accelerate the development of high-quality, **accessible**, and responsive web applications.
 
-## Expanding the ESLint configuration
+The library focuses on delivering a complete **Design System**, emphasizing clean architecture, detailed documentation, and robust type safety to ensure a seamless developer experience.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔗 Core Engineering Focus
+
+Zenith UI is engineered based on modern frontend best practices, demonstrated by the following key principles:
+
+- **Atomic Component Design:** All components are built following the principles of Atomic Design, ensuring maximum reusability and maintainability across the entire system.
+- **React JavaScript-First Development:** The entire codebase is written in JavaScript, providing strong typing, enhanced IntelliSense, and significantly reducing runtime errors.
+- **Prop-Driven Styling:** Visual presentation is highly decoupled from component logic. Styling variations (size, variant, color) are dynamically managed based purely on component props.
+- **Professional Documentation (Storybook):** Storybook is used to create a living, interactive style guide where every component variant, state, and prop is meticulously documented for visual regression testing and easy developer onboarding.
+- **Accessibility (A11y) Commitment:** Components are built with WAI-ARIA standards in mind, ensuring a positive experience for users relying on assistive technologies.
+
+---
+
+## 🚀 Getting Started
+
+### Installation
+
+Install Zenith UI using npm or yarn:
+
+```bash
+# Using npm
+npm install zenith-ui
+
+# Or using yarn
+yarn add zenith-ui
+```
+
+```jsx
+import React from "react";
+import { Button, Card, Input } from "zenith-ui";
+
+function UserProfile() {
+  return (
+    <Card title="User Settings" shadow="lg">
+      <Input label="Email" placeholder="user@example.com" />
+      <Button variant="primary" size="lg" style={{ marginTop: "15px" }}>
+        Save Changes
+      </Button>
+    </Card>
+  );
+}
+```
