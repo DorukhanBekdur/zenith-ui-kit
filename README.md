@@ -15,8 +15,6 @@
   <img src="https://img.shields.io/badge/ACCESSIBILITY-000000?style=for-the-badge&labelColor=333333&color=008080" />
 </p>
 
-![Zenith Logo](assets/zenith.jpg)
-
 ---
 
 ## 🔥 Project Overview
