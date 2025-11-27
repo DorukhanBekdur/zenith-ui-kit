@@ -12,6 +12,7 @@
   border-radius: $zenith-border-radius;
   font-size: 1rem;
   transition: border-color 0.2s ease;
+  font-family: "Inter", sans-serif;
 
   &:focus {
     outline: none;
@@ -28,10 +29,12 @@
   color: #dc3545;
   font-size: 0.875rem;
   margin-top: $zenith-spacing-xs;
+  font-family: "Inter", sans-serif;
 }
 
 .label {
   font-weight: 600;
   margin-bottom: $zenith-spacing-xs;
   color: $zenith-color-text;
+  font-family: "Inter", sans-serif;
 }
