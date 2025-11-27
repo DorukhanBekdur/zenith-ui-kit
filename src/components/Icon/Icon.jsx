@@ -1,11 +1,6 @@
 import React from "react";
 import styles from "./Icon.module.scss";
 
-/**
- * @param {('sm'|'md'|'lg')} size
- * @param {('default'|'primary'|'error')} color
- * @param {React.ReactNode} children
- */
 export const Icon = ({
   size = "md",
   color = "default",
