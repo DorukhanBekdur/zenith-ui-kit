@@ -1,6 +1,6 @@
 # ⚛️ Zenith UI: A Modern Component Library
 
-[![Last Commit](https://img.shields.io/github/last-commit/[ZENITH_UI_REPO_USER]/[ZENITH_UI_REPO])](https://github.com/[ZENITH_UI_REPO_USER]/[ZENITH_UI_REPO]/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/DorukhanBekdur/zenith-ui-kit)](https://github.com/DorukhanBekdur/zenith-ui-kit/commits/main)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/[ZENITH_UI_REPO_USER]/[ZENITH_UI_REPO]/blob/main/LICENSE)
 
 <p align="center">
