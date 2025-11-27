@@ -37,13 +37,26 @@ Zenith UI is engineered based on modern frontend best practices, demonstrated by
 
 Install Zenith UI using npm or yarn:
 
-```bash
-# Using npm
-npm install zenith-ui
+1.  **Clone the repository:**
 
-# Or using yarn
-yarn add zenith-ui
-```
+    ```bash
+    git clone [https://github.com/DorukhanBekdur/zenith-ui-kit.git](https://github.com/DorukhanBekdur/zenith-ui-kit.git)
+    cd zenith-ui-kit
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or yarn
+
+    ```
+
+3.  **Run Storybook (Development Server):**
+    ```bash
+    npm run storybook
+    # This will open the documentation playground at http://localhost:6006
+    ```
 
 ## 🧩 Component Showcase
 
@@ -67,6 +80,24 @@ Zenith UI is highly customizable and designed to integrate seamlessly with your 
 - **SCSS Variables (Advanced):** If you are consuming the raw SCSS files, you can modify global SCSS variables before importing the library's main styles to change the fundamental look and feel across the entire system at the CSS level.
 - **Component Overrides (`sx` Prop):** For local, one-off style adjustments that do not require global changes, every component supports a special style prop (e.g., `sx` or `css` depending on the styling solution) allowing you to inject custom styles directly.
 
-_(For detailed instructions and theme object structure, see the [Theming Guide Link] in our documentation.)_
+## 🛠️ Development & Contribution
+
+We enthusiastically welcome contributions from the community!
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/DorukhanBekdur/zenith-ui-kit.git](https://github.com/DorukhanBekdur/zenith-ui-kit.git)
+    cd zenith-ui-kit
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or yarn
+    ```
+3.  **Run Storybook (Development Server):**
+    ```bash
+    npm run storybook
+    # This will open the documentation playground at http://localhost:6006
+    ```
 
 ---
