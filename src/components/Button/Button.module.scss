@@ -1,0 +1,41 @@
+@use "sass:color";
+@use "../../styles/variables" as *;
+
+.button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  padding: $zenith-spacing-sm $zenith-spacing-md;
+  border-radius: $zenith-border-radius;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+// Status Styles
+.primary {
+  color: white;
+  background-color: $zenith-color-primary;
+  &:hover {
+    background-color: color.adjust($zenith-color-primary, $lightness: -5%);
+  }
+}
+
+.secondary {
+  color: $zenith-color-text;
+  background-color: #f8f9fa;
+  border: 1px solid $zenith-color-secondary;
+  &:hover {
+    background-color: #e9ecef;
+  }
+}

@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "lint": "eslint .",
     "preview": "vite preview",
-    "test": "echo 'Test altyapısı henüz kurulmadı'",
-    "storybook": "echo 'Storybook henüz kurulmadı'",
-    "build-storybook": "echo 'Storybook henüz kurulmadı'"
+    "storybook": "storybook dev -p 6007",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "react": "^19.2.0",
