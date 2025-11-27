@@ -17,6 +17,8 @@ $zenith-spacing-lg: 24px;
 // Border Radius
 $zenith-border-radius-sm: 2px;
 $zenith-border-radius: 4px;
+$zenith-border-radius-md: 8px;
+$zenith-border-radius-lg: 12px;
 $zenith-border-radius-full: 90%;
 
 // Font Size
@@ -24,3 +26,6 @@ $zenith-font-size-sm: 0.75rem;
 $zenith-font-size-md: 1rem;
 $zenith-font-size-lg: 1.25rem;
 $zenith-font-weight-bold: 700;
+
+// Z-Index
+$zenith-zindex-modal: 1050;
