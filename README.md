@@ -65,9 +65,11 @@ Zenith UI is highly customizable and designed to integrate seamlessly with your 
 - **SCSS Variables (Advanced):** If you are consuming the raw SCSS files, you can modify global SCSS variables before importing the library's main styles to change the fundamental look and feel across the entire system at the CSS level.
 - **Component Overrides (`sx` Prop):** For local, one-off style adjustments that do not require global changes, every component supports a special style prop (e.g., `sx` or `css` depending on the styling solution) allowing you to inject custom styles directly.
 
-## 💡 Usage Example
+### Usage Example 💡
 
 You can import and use any component directly in your React application:
+
+**1. Basic User Form Example (Input & Button):**
 
 ```jsx
 import React from "react";
@@ -81,6 +83,49 @@ function UserProfile() {
         Save Changes
       </Button>
     </Card>
+  );
+}
+```
+
+**2. Alert and Link Example (Feedback & Action)::**
+
+```jsx
+import React from "react";
+import { Alert, Link } from "zenith-ui";
+
+function DashboardNotification() {
+  return (
+    <Alert variant="warning" title="License Expiring">
+      Your subscription will expire in 3 days.
+      <Link href="/billing" underline>
+        Update your billing details.
+      </Link>
+    </Alert>
+  );
+}
+```
+
+**3. Data Entry with Select (Forms)::**
+
+```jsx
+import React, { useState } from "react";
+import { Select } from "zenith-ui";
+
+function LanguageSelector() {
+  const [lang, setLang] = useState("en");
+
+  const options = [
+    { value: "tr", label: "Turkish" },
+    { value: "en", label: "English" },
+  ];
+
+  return (
+    <Select
+      label="Select Language"
+      options={options}
+      value={lang}
+      onChange={(e) => setLang(e.target.value)}
+    />
   );
 }
 ```
