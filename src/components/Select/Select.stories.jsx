@@ -1,4 +1,3 @@
-// src/components/Select/Select.stories.jsx
 import React, { useState } from "react";
 import { Select } from "./Select";
 
@@ -25,7 +24,6 @@ const meta = {
 
 export default meta;
 
-// Kontrollü (Stateful) Select Örneği
 export const Default = {
   render: () => {
     const [selection, setSelection] = useState(null);
@@ -47,7 +45,6 @@ export const Default = {
   args: {},
 };
 
-// Başlangıç Değeri Olan Select Örneği
 export const PreSelected = {
   render: () => {
     const [selection, setSelection] = useState("banana");
