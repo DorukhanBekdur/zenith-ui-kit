@@ -37,10 +37,10 @@ Zenith UI is engineered based on modern frontend best practices, demonstrated by
 
 Install Zenith UI using npm or yarn:
 
-    ```bash
+```bash
     npm install
     # or yarn
-    ```
+```
 
 ## 🧩 Component Showcase
 
