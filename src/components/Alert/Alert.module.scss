@@ -1,0 +1,34 @@
+@use "../../styles/variables" as *;
+
+.alert {
+  padding: $zenith-spacing-md;
+  border-radius: $zenith-border-radius;
+  border: 1px solid transparent;
+  margin-bottom: $zenith-spacing-lg;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+.info {
+  background-color: #e6f7ff;
+  border-color: #91d5ff;
+  color: #0050b3;
+}
+
+.success {
+  background-color: #f6ffed;
+  border-color: #b7eb8f;
+  color: #237804;
+}
+
+.warning {
+  background-color: #fffbe6;
+  border-color: #ffe58f;
+  color: #ad8b00;
+}
+
+.error {
+  background-color: #fff2f0;
+  border-color: #ffccc7;
+  color: #cf1322;
+}
