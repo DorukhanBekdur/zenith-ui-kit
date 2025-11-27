@@ -1,0 +1,55 @@
+@use "../../styles/variables" as *;
+
+.radioWrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-family: "Inter", sans-serif;
+  margin-bottom: $zenith-spacing-sm;
+}
+
+.hiddenRadio {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.visibleRadio {
+  height: $zenith-spacing-md;
+  width: $zenith-spacing-md;
+  background-color: #fff;
+  border: 2px solid $zenith-color-secondary;
+  border-radius: 50%;
+  margin-right: $zenith-spacing-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.visibleRadio:hover {
+  border-color: $zenith-color-primary;
+}
+
+.hiddenRadio:checked + .visibleRadio {
+  border-color: $zenith-color-primary;
+}
+
+.hiddenRadio:checked + .visibleRadio::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $zenith-color-primary;
+}
+
+.radioWrapper.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.radioWrapper.disabled .visibleRadio {
+  border-color: $zenith-color-secondary;
+}
