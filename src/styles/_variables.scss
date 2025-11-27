@@ -2,6 +2,8 @@
 $zenith-color-primary: #007bff;
 $zenith-color-secondary: #6c757d;
 $zenith-color-success: #28a745;
+$zenith-color-warning: #ffc107;
+$zenith-color-error: #dc3545;
 $zenith-color-text: #212529;
 $zenith-color-light: #f8f9fa;
 $zenith-color-white: #ffffff;
@@ -15,3 +17,10 @@ $zenith-spacing-lg: 24px;
 // Border Radius
 $zenith-border-radius-sm: 2px;
 $zenith-border-radius: 4px;
+$zenith-border-radius-full: 90%;
+
+// Font Size
+$zenith-font-size-sm: 0.75rem;
+$zenith-font-size-md: 1rem;
+$zenith-font-size-lg: 1.25rem;
+$zenith-font-weight-bold: 700;

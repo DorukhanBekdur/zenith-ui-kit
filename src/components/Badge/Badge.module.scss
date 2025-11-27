@@ -1,0 +1,42 @@
+@use "../../styles/variables" as *;
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $zenith-spacing-xs $zenith-spacing-sm;
+  border-radius: $zenith-border-radius-full;
+  font-size: $zenith-font-size-sm;
+  font-weight: $zenith-font-weight-bold;
+  line-height: 1;
+  font-family: "Inter", sans-serif;
+
+  & > *:not(:last-child) {
+    margin-right: $zenith-spacing-xs;
+  }
+}
+
+.default {
+  background-color: $zenith-color-secondary;
+  color: $zenith-color-white;
+}
+
+.primary {
+  background-color: $zenith-color-primary;
+  color: $zenith-color-white;
+}
+
+.success {
+  background-color: $zenith-color-success;
+  color: $zenith-color-white;
+}
+
+.warning {
+  background-color: $zenith-color-warning;
+  color: $zenith-color-text;
+}
+
+.error {
+  background-color: $zenith-color-error;
+  color: $zenith-color-white;
+}
