@@ -33,4 +33,14 @@ Zenith UI is engineered based on modern frontend best practices, demonstrated by
 - **Professional Documentation (Storybook):** Storybook is used to create a living, interactive style guide where every component variant, state, and prop is meticulously documented for visual regression testing and easy developer onboarding.
 - **Accessibility (A11y) Commitment:** Components are built with WAI-ARIA standards in mind, ensuring a positive experience for users relying on assistive technologies.
 
----
+## 🚀 Getting Started
+
+Install Zenith UI using npm or yarn:
+
+```bash
+# Using npm
+npm install zenith-ui
+
+# Or using yarn
+yarn add zenith-ui
+```
