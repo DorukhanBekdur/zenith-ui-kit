@@ -106,7 +106,7 @@ This project is licensed under the **MIT License**.
 
 For major issues or business inquiries, please contact the lead maintainer:
 
-- **Maintainer:** [Dorukhan/DorukhanBekdur]
-- **Email:** [dorukhanbekdur@gmail.com]
+- **Maintainer:** DorukhanBekdur
+- **Email:** dorukhanbekdur@gmail.com
 
 ---
