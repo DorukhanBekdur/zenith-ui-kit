@@ -1,0 +1,31 @@
+@use "../../styles/variables" as *;
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: $zenith-spacing-md;
+
+  color: $zenith-color-text;
+
+  & > svg {
+    width: 1em;
+    height: 1em;
+    display: block;
+  }
+}
+
+.sizeSm {
+  font-size: $zenith-spacing-sm;
+}
+.sizeLg {
+  font-size: $zenith-spacing-lg;
+}
+
+.colorPrimary {
+  color: $zenith-color-primary;
+}
+.colorError {
+  color: #dc3545;
+}
