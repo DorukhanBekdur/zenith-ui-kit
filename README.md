@@ -44,3 +44,19 @@ npm install zenith-ui
 # Or using yarn
 yarn add zenith-ui
 ```
+
+## 🧩 Component Showcase
+
+Zenith UI provides a robust set of ready-to-use components, categorized for easy navigation.
+
+| Category       | Components                                  | Description                            |
+| :------------- | :------------------------------------------ | :------------------------------------- |
+| **Actions**    | `Button`, `IconButton`, `Link`              | Interactive elements for user actions. |
+| **Data Entry** | `Input`, `Select`, `Checkbox`, `RadioGroup` | Forms and data collection components.  |
+| **Feedback**   | `Alert`, `Snackbar`, `Progress`, `Spinner`  | Notifying users about system status.   |
+| **Layout**     | `Grid`, `Stack`, `Card`, `Container`        | Tools for structuring the interface.   |
+| **Navigation** | `Tabs`, `Sidebar`, `Breadcrumbs`            | Guiding users through the application. |
+
+_(For a full list of components and their documentation, visit our [Storybook Documentation Link])_
+
+---
