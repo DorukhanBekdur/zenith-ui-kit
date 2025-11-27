@@ -5,7 +5,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/-REACT-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
-  <img src="https://img.shields.io/badge/-TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/-JAVACRIPT-3178C6?style=for-the-badge&logo=javascript&logoColor=white" />
   <img src="https://img.shields.io/badge/-SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
   <img src="https://img.shields.io/badge/-VITE-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
   <img src="https://img.shields.io/badge/-STORYBOOK-FF4785?style=for-the-badge&logo=storybook&logoColor=white" />
@@ -34,33 +34,3 @@ Zenith UI is engineered based on modern frontend best practices, demonstrated by
 - **Accessibility (A11y) Commitment:** Components are built with WAI-ARIA standards in mind, ensuring a positive experience for users relying on assistive technologies.
 
 ---
-
-## 🚀 Getting Started
-
-### Installation
-
-Install Zenith UI using npm or yarn:
-
-```bash
-# Using npm
-npm install zenith-ui
-
-# Or using yarn
-yarn add zenith-ui
-```
-
-```jsx
-import React from "react";
-import { Button, Card, Input } from "zenith-ui";
-
-function UserProfile() {
-  return (
-    <Card title="User Settings" shadow="lg">
-      <Input label="Email" placeholder="user@example.com" />
-      <Button variant="primary" size="lg" style={{ marginTop: "15px" }}>
-        Save Changes
-      </Button>
-    </Card>
-  );
-}
-```
