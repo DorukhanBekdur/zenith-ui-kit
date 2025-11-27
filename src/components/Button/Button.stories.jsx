@@ -20,7 +20,7 @@ const meta = {
 
 export default meta;
 
-// Stories
+// Button Stories
 
 export const Primary = {
   args: {
