@@ -1,7 +1,7 @@
 # ⚛️ Zenith UI: A Modern Component Library
 
 [![Last Commit](https://img.shields.io/github/last-commit/DorukhanBekdur/zenith-ui-kit)](https://github.com/DorukhanBekdur/zenith-ui-kit/commits/main)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/[ZENITH_UI_REPO_USER]/[ZENITH_UI_REPO]/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/DorukhanBekdur/zenith-ui-kit/blob/main/LICENSE)
 
 <p align="center">
   <img src="https://img.shields.io/badge/-REACT-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
@@ -37,25 +37,10 @@ Zenith UI is engineered based on modern frontend best practices, demonstrated by
 
 Install Zenith UI using npm or yarn:
 
-1.  **Clone the repository:**
-
-    ```bash
-    git clone [https://github.com/DorukhanBekdur/zenith-ui-kit.git](https://github.com/DorukhanBekdur/zenith-ui-kit.git)
-    cd zenith-ui-kit
-    ```
-
-2.  **Install dependencies:**
-
     ```bash
     npm install
     # or yarn
 
-    ```
-
-3.  **Run Storybook (Development Server):**
-    ```bash
-    npm run storybook
-    # This will open the documentation playground at http://localhost:6006
     ```
 
 ## 🧩 Component Showcase
@@ -79,6 +64,26 @@ Zenith UI is highly customizable and designed to integrate seamlessly with your 
 - **Global Theme Overrides:** Easily override the default design tokens (colors, typography, spacing, breakpoints) by passing a custom theme object to the `ThemeProvider` component. This affects all instances of every component globally.
 - **SCSS Variables (Advanced):** If you are consuming the raw SCSS files, you can modify global SCSS variables before importing the library's main styles to change the fundamental look and feel across the entire system at the CSS level.
 - **Component Overrides (`sx` Prop):** For local, one-off style adjustments that do not require global changes, every component supports a special style prop (e.g., `sx` or `css` depending on the styling solution) allowing you to inject custom styles directly.
+
+## 💡 Usage Example
+
+You can import and use any component directly in your React application:
+
+```jsx
+import React from "react";
+import { Button, Card, Input } from "zenith-ui";
+
+function UserProfile() {
+  return (
+    <Card title="User Settings" shadow="lg">
+      <Input label="Email" placeholder="user@example.com" />
+      <Button variant="primary" size="lg" style={{ marginTop: "15px" }}>
+        Save Changes
+      </Button>
+    </Card>
+  );
+}
+```
 
 ## 🛠️ Development & Contribution
 
@@ -106,7 +111,7 @@ This project is licensed under the **MIT License**.
 
 For major issues or business inquiries, please contact the lead maintainer:
 
-- **Developer:** DorukhanBekdur
+- **Maintainer:** DorukhanBekdur
 - **Email:** dorukhanbekdur@gmail.com
 
 ---
