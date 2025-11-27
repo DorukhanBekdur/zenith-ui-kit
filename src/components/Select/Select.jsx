@@ -6,7 +6,7 @@ export const Select = ({
   options = [],
   value,
   onChange,
-  placeholder = "Make your choice",
+  placeholder = "Please select",
   ...props
 }) => {
   const [isOpen, setIsOpen] = useState(false);

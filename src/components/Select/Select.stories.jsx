@@ -1,12 +1,13 @@
+// src/components/Select/Select.stories.jsx
 import React, { useState } from "react";
 import { Select } from "./Select";
 
 const sampleOptions = [
-  { label: "Apple", value: "apple" },
-  { label: "Banana", value: "banana" },
-  { label: "Orange", value: "orange" },
-  { label: "Strawberry", value: "strawberry" },
-  { label: "Watermelon", value: "watermelon" },
+  { label: "Elma", value: "apple" },
+  { label: "Muz", value: "banana" },
+  { label: "Portakal", value: "orange" },
+  { label: "Çilek", value: "strawberry" },
+  { label: "Karpuz", value: "watermelon" },
 ];
 
 const meta = {
@@ -24,6 +25,7 @@ const meta = {
 
 export default meta;
 
+// Kontrollü (Stateful) Select Örneği
 export const Default = {
   render: () => {
     const [selection, setSelection] = useState(null);
@@ -33,11 +35,11 @@ export const Default = {
 
     return (
       <Select
-        label="Preferred Fruit"
+        label="Tercih Edilen Meyve"
         options={sampleOptions}
         value={selection}
         onChange={handleChange}
-        placeholder="Please choose a fruit"
+        placeholder="Lütfen bir meyve seçin"
         name="fruitSelection"
       />
     );
@@ -45,6 +47,7 @@ export const Default = {
   args: {},
 };
 
+// Başlangıç Değeri Olan Select Örneği
 export const PreSelected = {
   render: () => {
     const [selection, setSelection] = useState("banana");
@@ -54,7 +57,7 @@ export const PreSelected = {
 
     return (
       <Select
-        label="Starting Selection"
+        label="Başlangıç Seçimi"
         options={sampleOptions}
         value={selection}
         onChange={handleChange}
