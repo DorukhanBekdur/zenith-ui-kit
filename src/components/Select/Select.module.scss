@@ -1,0 +1,79 @@
+@use "../../styles/variables" as *;
+
+.selectWrapper {
+  display: inline-block;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  margin-bottom: $zenith-spacing-md;
+  width: 250px;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: $zenith-spacing-xs;
+  color: $zenith-color-text;
+  display: block;
+}
+
+.selectButton {
+  width: 100%;
+  padding: $zenith-spacing-sm;
+  border: 1px solid $zenith-color-secondary;
+  border-radius: $zenith-border-radius;
+  background-color: white;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.2s ease;
+  font-size: 1rem;
+}
+
+.selectButton:hover,
+.selectButton.isOpen {
+  border-color: $zenith-color-primary;
+  outline: none;
+}
+
+.arrowIcon {
+  margin-left: $zenith-spacing-sm;
+  transition: transform 0.2s ease;
+}
+.selectButton.isOpen .arrowIcon {
+  transform: rotate(180deg);
+}
+
+.optionsList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid $zenith-color-secondary;
+  border-top: none;
+  border-radius: 0 0 $zenith-border-radius $zenith-border-radius;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.optionItem {
+  padding: $zenith-spacing-sm;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.optionItem:hover {
+  background-color: #f0f0f0;
+}
+
+.optionItem.selected {
+  background-color: $zenith-color-light;
+  font-weight: 600;
+  color: $zenith-color-primary;
+}
