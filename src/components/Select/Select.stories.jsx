@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Select } from "./Select";
 
 const sampleOptions = [
-  { label: "Elma", value: "apple" },
-  { label: "Muz", value: "banana" },
-  { label: "Portakal", value: "orange" },
-  { label: "Çilek", value: "strawberry" },
-  { label: "Karpuz", value: "watermelon" },
+  { label: "Apple", value: "apple" },
+  { label: "Banana", value: "banana" },
+  { label: "Orange", value: "orange" },
+  { label: "Strawberry", value: "strawberry" },
+  { label: "Watermelon", value: "watermelon" },
 ];
 
 const meta = {
@@ -33,11 +33,11 @@ export const Default = {
 
     return (
       <Select
-        label="Tercih Edilen Meyve"
+        label="Preferred Fruit"
         options={sampleOptions}
         value={selection}
         onChange={handleChange}
-        placeholder="Lütfen bir meyve seçin"
+        placeholder="Please select a fruit"
         name="fruitSelection"
       />
     );
@@ -54,7 +54,7 @@ export const PreSelected = {
 
     return (
       <Select
-        label="Başlangıç Seçimi"
+        label="Initial Selection"
         options={sampleOptions}
         value={selection}
         onChange={handleChange}

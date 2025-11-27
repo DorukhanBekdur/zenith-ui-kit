@@ -4,7 +4,7 @@ import { Button } from "./Button";
 
 describe("Button Component Tests", () => {
   it("should render the button with the correct label", () => {
-    const labelText = "Kaydet";
+    const labelText = "Save";
     render(<Button label={labelText} />);
     const buttonElement = screen.getByText(labelText);
     expect(buttonElement).toBeInTheDocument();

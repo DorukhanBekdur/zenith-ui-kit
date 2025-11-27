@@ -4,7 +4,7 @@ import { Input } from "./Input";
 
 describe("Input Component Tests", () => {
   it("should render the input and its label", () => {
-    const labelText = "E-posta Adresi";
+    const labelText = "Email Address";
     render(<Input label={labelText} placeholder="ornek@mail.com" />);
 
     expect(screen.getByText(labelText)).toBeInTheDocument();

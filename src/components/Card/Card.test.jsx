@@ -25,9 +25,9 @@ describe("Card Component Tests", () => {
   });
 
   it("should render a nested component (Button) inside the Card", () => {
-    const buttonLabel = "Onayla ve Bitir";
+    const buttonLabel = "Confirm & Finish";
     render(
-      <Card title="İşlem Kartı">
+      <Card title="Payment Card">
         <Button label={buttonLabel} primary={true} />
       </Card>
     );
