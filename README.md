@@ -59,4 +59,14 @@ Zenith UI provides a robust set of ready-to-use components, categorized for easy
 
 _(For a full list of components and their documentation, visit our [Storybook Documentation Link])_
 
+## 🎨 Customization & Theming
+
+Zenith UI is highly customizable and designed to integrate seamlessly with your brand identity. We offer multiple layers of customization:
+
+- **Global Theme Overrides:** Easily override the default design tokens (colors, typography, spacing, breakpoints) by passing a custom theme object to the `ThemeProvider` component. This affects all instances of every component globally.
+- **SCSS Variables (Advanced):** If you are consuming the raw SCSS files, you can modify global SCSS variables before importing the library's main styles to change the fundamental look and feel across the entire system at the CSS level.
+- **Component Overrides (`sx` Prop):** For local, one-off style adjustments that do not require global changes, every component supports a special style prop (e.g., `sx` or `css` depending on the styling solution) allowing you to inject custom styles directly.
+
+_(For detailed instructions and theme object structure, see the [Theming Guide Link] in our documentation.)_
+
 ---
