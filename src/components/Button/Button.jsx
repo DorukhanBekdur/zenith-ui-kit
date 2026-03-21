@@ -2,23 +2,38 @@ import React from "react";
 import styles from "./Button.module.scss";
 
 export const Button = ({
-  primary = false,
+  variant = "primary",
+  size = "md",
   label,
   disabled = false,
+  loading = false,
+  startIcon,
+  endIcon,
   onClick,
+  className,
+  children,
   ...props
 }) => {
-  const modeClass = primary ? styles.primary : styles.secondary;
+  const buttonClasses = [
+    styles.button,
+    styles[variant],
+    styles[size],
+    loading ? styles.loading : "",
+    className
+  ].filter(Boolean).join(" ");
 
   return (
     <button
       type="button"
-      disabled={disabled}
+      disabled={disabled || loading}
       onClick={onClick}
-      className={`${styles.button} ${modeClass}`}
+      className={buttonClasses}
       {...props}
     >
-      {label}
+      {loading && <span className={styles.spinner} />}
+      {!loading && startIcon && <span className={styles.icon}>{startIcon}</span>}
+      <span className={styles.label}>{label || children}</span>
+      {!loading && endIcon && <span className={styles.icon}>{endIcon}</span>}
     </button>
   );
 };

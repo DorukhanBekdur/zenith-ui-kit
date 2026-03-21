@@ -1,0 +1,42 @@
+@use "../../styles/variables" as *;
+
+.breadcrumbs {
+  font-family: $zenith-font-family;
+  font-size: $zenith-font-size-sm;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  color: $zenith-color-text-muted;
+}
+
+.link {
+  color: $zenith-color-primary;
+  text-decoration: none;
+  transition: color $zenith-transition-fast;
+
+  &:hover {
+    color: $zenith-color-primary-dark;
+    text-decoration: underline;
+  }
+}
+
+.current {
+  color: $zenith-color-text-main;
+  font-weight: $zenith-font-weight-medium;
+}
+
+.separator {
+  margin: 0 $zenith-spacing-sm;
+  color: var(--zenith-border);
+  user-select: none;
+}

@@ -2,40 +2,111 @@
 @use "../../styles/variables" as *;
 
 .button {
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
+  font-family: $zenith-font-family;
+  font-weight: $zenith-font-weight-medium;
+  border-radius: $zenith-border-radius-md;
   cursor: pointer;
-  padding: $zenith-spacing-sm $zenith-spacing-md;
-  border-radius: $zenith-border-radius;
-  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: $zenith-transition-fast;
+  border: 1px solid transparent;
+  width: fit-content;
 
-  &:hover {
-    opacity: 0.9;
+  &:hover:not(:disabled) {
     transform: translateY(-1px);
+    box-shadow: $zenith-shadow-md;
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
   }
 
   &:disabled {
     cursor: not-allowed;
-    opacity: 0.6;
+    opacity: 0.5;
+    box-shadow: none !important;
   }
 }
 
-// Status Styles
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:first-child { margin-right: $zenith-spacing-2xs; }
+  &:last-child { margin-left: $zenith-spacing-2xs; }
+}
+
+.spinner {
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  margin-right: $zenith-spacing-xs;
+  animation: rotate 0.75s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+// Sizes
+.sm {
+  padding: $zenith-spacing-2xs $zenith-spacing-sm;
+  font-size: $zenith-font-size-sm;
+  height: 32px;
+}
+
+.md {
+  padding: $zenith-spacing-xs $zenith-spacing-md;
+  font-size: $zenith-font-size-md;
+  height: 40px;
+}
+
+.lg {
+  padding: $zenith-spacing-sm $zenith-spacing-lg;
+  font-size: $zenith-font-size-lg;
+  font-weight: $zenith-font-weight-semibold;
+  height: 48px;
+}
+
+// Variants
 .primary {
-  color: white;
   background-color: $zenith-color-primary;
-  &:hover {
-    background-color: color.adjust($zenith-color-primary, $lightness: -5%);
+  color: $zenith-color-white;
+
+  &:hover:not(:disabled) {
+    background-color: $zenith-color-primary-dark;
   }
 }
 
 .secondary {
-  color: $zenith-color-text;
-  background-color: #f8f9fa;
-  border: 1px solid $zenith-color-secondary;
-  &:hover {
-    background-color: #e9ecef;
+  background-color: $zenith-color-secondary;
+  color: $zenith-color-white;
+
+  &:hover:not(:disabled) {
+    background-color: $zenith-color-secondary-hover;
+  }
+}
+
+.outline {
+  background-color: transparent;
+  border-color: $zenith-color-primary;
+  color: $zenith-color-primary;
+
+  &:hover:not(:disabled) {
+    background-color: rgba($zenith-color-primary, 0.05);
+  }
+}
+
+.ghost {
+  background-color: transparent;
+  color: $zenith-color-text-main;
+
+  &:hover:not(:disabled) {
+    background-color: rgba($zenith-color-secondary, 0.05);
   }
 }

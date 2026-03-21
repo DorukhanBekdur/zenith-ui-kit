@@ -1,0 +1,37 @@
+@use "../../styles/variables" as *;
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--zenith-border);
+  border-radius: $zenith-border-radius-md;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: $zenith-font-family;
+  background-color: var(--zenith-bg);
+
+  th {
+    text-align: left;
+    padding: $zenith-spacing-md;
+    background-color: var(--zenith-border);
+    color: $zenith-color-text-main;
+    font-weight: $zenith-font-weight-semibold;
+    font-size: $zenith-font-size-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  td {
+    padding: $zenith-spacing-md;
+    border-top: 1px solid var(--zenith-border);
+    color: $zenith-color-text-muted;
+    font-size: $zenith-font-size-md;
+  }
+
+  tr:hover td {
+    background-color: rgba(var(--zenith-primary-rgb), 0.05);
+  }
+}

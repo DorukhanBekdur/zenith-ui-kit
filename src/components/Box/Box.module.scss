@@ -1,0 +1,38 @@
+@use "../../styles/variables" as *;
+
+.box {
+  display: block;
+}
+
+// Spacing Utilities
+@each $key, $val in (
+  "none": 0,
+  "xs": $zenith-spacing-xs,
+  "sm": $zenith-spacing-sm,
+  "md": $zenith-spacing-md,
+  "lg": $zenith-spacing-lg,
+  "xl": $zenith-spacing-xl
+) {
+  .p-#{$key} { padding: $val; }
+  .m-#{$key} { margin: $val; }
+}
+
+// Backgrounds
+.bg-white { background-color: $zenith-color-white; }
+.bg-subtle { background-color: $zenith-color-bg; }
+.bg-primary { background-color: $zenith-color-primary; }
+
+// Border Radius
+.rounded-sm { border-radius: $zenith-border-radius-sm; }
+.rounded-md { border-radius: $zenith-border-radius-md; }
+.rounded-lg { border-radius: $zenith-border-radius-lg; }
+.rounded-full { border-radius: $zenith-border-radius-full; }
+
+// Borders
+.border-main { border: 1px solid $zenith-color-border; }
+.border-primary { border: 1px solid $zenith-color-primary; }
+
+// Shadows
+.shadow-sm { box-shadow: $zenith-shadow-sm; }
+.shadow-md { box-shadow: $zenith-shadow-md; }
+.shadow-lg { box-shadow: $zenith-shadow-lg; }

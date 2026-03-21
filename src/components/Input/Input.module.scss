@@ -3,38 +3,92 @@
 .inputWrapper {
   display: flex;
   flex-direction: column;
-  margin-bottom: $zenith-spacing-md;
+  gap: $zenith-spacing-2xs;
+  width: 100%;
+}
+
+.label {
+  font-family: $zenith-font-family;
+  font-size: $zenith-font-size-sm;
+  font-weight: $zenith-font-weight-medium;
+  color: $zenith-color-text-main;
 }
 
 .input {
-  padding: $zenith-spacing-sm;
-  border: 1px solid $zenith-color-secondary;
-  border-radius: $zenith-border-radius;
-  font-size: 1rem;
-  transition: border-color 0.2s ease;
-  font-family: "Inter", sans-serif;
+  font-family: $zenith-font-family;
+  border-radius: $zenith-border-radius-md;
+  transition: $zenith-transition-fast;
+  width: 100%;
+  box-sizing: border-box;
 
   &:focus {
     outline: none;
+    box-shadow: 0 0 0 2px rgba($zenith-color-primary, 0.2);
+  }
+
+  &::placeholder {
+    color: $zenith-color-text-muted;
+  }
+
+  &:disabled {
+    background-color: #f1f5f9;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+// Variants
+.outlined {
+  border: 1px solid $zenith-color-border;
+  background-color: $zenith-color-white;
+
+  &:focus {
     border-color: $zenith-color-primary;
-    box-shadow: 0 0 0 1px $zenith-color-primary;
+  }
+}
+
+.filled {
+  border: 1px solid transparent;
+  background-color: #f1f5f9;
+
+  &:focus {
+    background-color: $zenith-color-white;
+    border-color: $zenith-color-primary;
+  }
+}
+
+// Sizes
+.sm {
+  .input {
+    padding: $zenith-spacing-2xs $zenith-spacing-sm;
+    font-size: $zenith-font-size-sm;
+  }
+}
+
+.md {
+  .input {
+    padding: $zenith-spacing-xs $zenith-spacing-md;
+    font-size: $zenith-font-size-md;
+  }
+}
+
+.lg {
+  .input {
+    padding: $zenith-spacing-sm $zenith-spacing-lg;
+    font-size: $zenith-font-size-lg;
   }
 }
 
 .errorInput {
-  border-color: #dc3545 !important;
+  border-color: $zenith-color-error !important;
+  
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($zenith-color-error, 0.2) !important;
+  }
 }
 
 .errorMessage {
-  color: #dc3545;
-  font-size: 0.875rem;
-  margin-top: $zenith-spacing-xs;
-  font-family: "Inter", sans-serif;
-}
-
-.label {
-  font-weight: 600;
-  margin-bottom: $zenith-spacing-xs;
-  color: $zenith-color-text;
-  font-family: "Inter", sans-serif;
+  color: $zenith-color-error;
+  font-size: $zenith-font-size-xs;
+  font-weight: $zenith-font-weight-medium;
 }

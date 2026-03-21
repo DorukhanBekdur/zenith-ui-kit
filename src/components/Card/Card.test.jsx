@@ -9,7 +9,7 @@ describe("Card Component Tests", () => {
     render(<Card title={cardTitle} />);
 
     expect(
-      screen.getByRole("heading", { level: 2, name: cardTitle })
+      screen.getByRole("heading", { level: 3, name: cardTitle })
     ).toBeInTheDocument();
   });
 
@@ -28,7 +28,7 @@ describe("Card Component Tests", () => {
     const buttonLabel = "Confirm & Finish";
     render(
       <Card title="Payment Card">
-        <Button label={buttonLabel} primary={true} />
+        <Button label={buttonLabel} variant="primary" />
       </Card>
     );
 

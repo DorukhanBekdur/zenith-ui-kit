@@ -1,0 +1,31 @@
+@use "../../styles/variables" as *;
+
+.stack {
+  display: flex;
+}
+
+// Directions
+.direction-column { flex-direction: column; }
+.direction-row { flex-direction: row; }
+
+// Alignment
+.align-stretch { align-items: stretch; }
+.align-center { align-items: center; }
+.align-start { align-items: flex-start; }
+.align-end { align-items: flex-end; }
+
+// Justify
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+
+// Wrap
+.wrap { flex-wrap: wrap; }
+
+// Spacing
+.spacing-xs { gap: $zenith-spacing-xs; }
+.spacing-sm { gap: $zenith-spacing-sm; }
+.spacing-md { gap: $zenith-spacing-md; }
+.spacing-lg { gap: $zenith-spacing-lg; }
+.spacing-xl { gap: $zenith-spacing-xl; }

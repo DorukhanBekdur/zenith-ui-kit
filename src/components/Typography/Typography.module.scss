@@ -1,0 +1,36 @@
+@use "../../styles/variables" as *;
+
+.typography {
+  margin: 0;
+  font-family: $zenith-font-family;
+  line-height: 1.5;
+}
+
+// Variants
+.h1 { font-size: 2.5rem; line-height: 1.2; font-weight: $zenith-font-weight-bold; }
+.h2 { font-size: 2rem; line-height: 1.25; font-weight: $zenith-font-weight-bold; }
+.h3 { font-size: 1.5rem; line-height: 1.3; font-weight: $zenith-font-weight-semibold; }
+.h4 { font-size: 1.25rem; line-height: 1.4; font-weight: $zenith-font-weight-semibold; }
+.h5 { font-size: 1.125rem; line-height: 1.4; font-weight: $zenith-font-weight-semibold; }
+.h6 { font-size: 1rem; line-height: 1.4; font-weight: $zenith-font-weight-semibold; }
+.body1 { font-size: $zenith-font-size-md; }
+.body2 { font-size: $zenith-font-size-sm; }
+.caption { font-size: $zenith-font-size-xs; color: $zenith-color-text-muted; }
+
+// Weights
+.weight-normal { font-weight: $zenith-font-weight-normal; }
+.weight-medium { font-weight: $zenith-font-weight-medium; }
+.weight-semibold { font-weight: $zenith-font-weight-semibold; }
+.weight-bold { font-weight: $zenith-font-weight-bold; }
+
+// Alignment
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+// Colors
+.color-main { color: $zenith-color-text-main; }
+.color-muted { color: $zenith-color-text-muted; }
+.color-primary { color: $zenith-color-primary; }
+.color-white { color: $zenith-color-white; }
+.color-error { color: $zenith-color-error; }

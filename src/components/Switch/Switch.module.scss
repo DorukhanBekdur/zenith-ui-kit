@@ -1,0 +1,75 @@
+@use "../../styles/variables" as *;
+
+.switchContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: $zenith-spacing-sm;
+  cursor: pointer;
+  user-select: none;
+  font-family: $zenith-font-family;
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.switchWrapper {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.md {
+  .switchWrapper { width: 44px; height: 24px; }
+  .slider::before { height: 18px; width: 18px; left: 3px; bottom: 3px; }
+  input:checked + .slider::before { transform: translateX(20px); }
+}
+
+.sm {
+  .switchWrapper { width: 34px; height: 18px; }
+  .slider::before { height: 14px; width: 14px; left: 2px; bottom: 2px; }
+  input:checked + .slider::before { transform: translateX(16px); }
+  .label { font-size: $zenith-font-size-sm; }
+}
+
+.input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:checked + .slider {
+    background-color: $zenith-color-primary;
+  }
+
+  &:focus-visible + .slider {
+    box-shadow: 0 0 0 2px var(--zenith-bg), 0 0 0 4px $zenith-color-primary;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $zenith-color-border;
+  transition: $zenith-transition-normal;
+  border-radius: $zenith-border-radius-full;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    transition: $zenith-transition-normal;
+    border-radius: 50%;
+    box-shadow: $zenith-shadow-sm;
+  }
+}
+
+.label {
+  color: $zenith-color-text-main;
+  font-weight: $zenith-font-weight-medium;
+}

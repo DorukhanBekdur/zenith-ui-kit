@@ -1,0 +1,59 @@
+@use "../../styles/variables" as *;
+
+.tooltipWrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.tooltipTip {
+  position: absolute;
+  border-radius: $zenith-border-radius-sm;
+  padding: $zenith-spacing-xs $zenith-spacing-sm;
+  color: white;
+  background-color: #1e293b; // Slate 800 - professional dark for tooltips
+  font-size: $zenith-font-size-xs;
+  font-family: $zenith-font-family;
+  white-space: nowrap;
+  z-index: $zenith-z-index-tooltip;
+  box-shadow: $zenith-shadow-lg;
+  animation: tooltipFade 0.2s ease-out;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+}
+
+.top {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  &::before {
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px 5px 0 5px;
+    border-color: #1e293b transparent transparent transparent;
+  }
+}
+
+.bottom {
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  &::before {
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #1e293b transparent;
+  }
+}
+
+@keyframes tooltipFade {
+  from { opacity: 0; transform: translateX(-50%) translateY(4px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}

@@ -1,0 +1,70 @@
+@use "../../styles/variables" as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: $zenith-z-index-modal;
+  display: flex;
+}
+
+.drawer {
+  background-color: $zenith-glass-bg;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-left: 1px solid $zenith-glass-border;
+  box-shadow: $zenith-shadow-xl;
+  height: 100%;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.left { margin-right: auto; }
+.right { margin-left: auto; }
+
+.header {
+  padding: $zenith-spacing-lg;
+  border-bottom: 1px solid var(--zenith-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-size: $zenith-font-size-lg;
+  color: $zenith-color-text-main;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: $zenith-color-text-muted;
+  &:hover { color: $zenith-color-text-main; }
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: $zenith-spacing-lg;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.left { animation-name: slideInLeft; }
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}

@@ -1,0 +1,39 @@
+@use "../../styles/variables" as *;
+
+.pagination {
+  display: flex;
+  gap: $zenith-spacing-xs;
+  font-family: $zenith-font-family;
+}
+
+.pageBtn {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 $zenith-spacing-xs;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--zenith-border);
+  border-radius: $zenith-border-radius-sm;
+  background-color: var(--zenith-bg);
+  color: $zenith-color-text-main;
+  cursor: pointer;
+  font-size: $zenith-font-size-sm;
+  transition: all $zenith-transition-fast;
+
+  &:hover:not(:disabled) {
+    border-color: $zenith-color-primary;
+    color: $zenith-color-primary;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.active {
+    background-color: $zenith-color-primary;
+    border-color: $zenith-color-primary;
+    color: white;
+  }
+}

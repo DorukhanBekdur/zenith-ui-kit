@@ -40,6 +40,7 @@ describe("RadioButton Component Tests", () => {
         name={groupName}
         value="C"
         checked={true}
+        onChange={() => {}}
       />
     );
 

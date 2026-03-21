@@ -26,7 +26,7 @@ describe("Checkbox Component Tests", () => {
   it("should be checked when the checked prop is true", () => {
     const labelText = "Varsayılan Onay";
 
-    render(<Checkbox label={labelText} checked={true} />);
+    render(<Checkbox label={labelText} checked={true} onChange={() => {}} />);
 
     const hiddenInput = screen.getByRole("checkbox", { name: labelText });
     expect(hiddenInput).toBeChecked();

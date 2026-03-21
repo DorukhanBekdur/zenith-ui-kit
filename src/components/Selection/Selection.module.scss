@@ -1,0 +1,92 @@
+@use "../../styles/variables" as *;
+
+.selectionContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: $zenith-spacing-sm;
+  cursor: pointer;
+  user-select: none;
+  font-family: $zenith-font-family;
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.hiddenInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkboxWrapper, .radioWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.styledCheckbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid $zenith-color-border;
+  border-radius: $zenith-border-radius-sm;
+  background-color: $zenith-color-white;
+  transition: $zenith-transition-fast;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.checked {
+    background-color: $zenith-color-primary;
+    border-color: $zenith-color-primary;
+  }
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: white;
+  stroke-width: 3px;
+}
+
+.styledRadio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid $zenith-color-border;
+  border-radius: 50%;
+  background-color: $zenith-color-white;
+  transition: $zenith-transition-fast;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.checked {
+    border-color: $zenith-color-primary;
+  }
+}
+
+.radioDot {
+  width: 10px;
+  height: 10px;
+  background-color: $zenith-color-primary;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+  .checked & {
+    transform: scale(1);
+  }
+}
+
+.label {
+  color: $zenith-color-text-main;
+  font-size: $zenith-font-size-md;
+}
+
+.hiddenInput:focus-visible + div {
+  box-shadow: 0 0 0 2px var(--zenith-bg), 0 0 0 4px $zenith-color-primary;
+}

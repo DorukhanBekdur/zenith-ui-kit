@@ -1,161 +1,111 @@
-# ⚛️ Zenith UI: A Modern Component Library
+<div align="center">
+  <h1>⚛️ Zenith UI Kit</h1>
+  <p><strong>A Premium, Accessible, and Aesthetics-Driven React Component Library</strong></p>
 
-[![Last Commit](https://img.shields.io/github/last-commit/DorukhanBekdur/zenith-ui-kit)](https://github.com/DorukhanBekdur/zenith-ui-kit/commits/main)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/DorukhanBekdur/zenith-ui-kit/blob/main/LICENSE)
+  [![Last Commit](https://img.shields.io/github/last-commit/DorukhanBekdur/zenith-ui-kit?style=flat-square)](https://github.com/DorukhanBekdur/zenith-ui-kit/commits/main)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/DorukhanBekdur/zenith-ui-kit/blob/main/LICENSE)
+  [![Tests](https://img.shields.io/badge/Tests-Passing-success?style=flat-square)](https://github.com/DorukhanBekdur/zenith-ui-kit)
+  [![Storybook](https://img.shields.io/badge/Storybook-Live-FF4785?style=flat-square&logo=storybook&logoColor=white)](https://zenith-ui-ecvczxiu5-dorukhan-bekdurs-projects.vercel.app)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/-REACT-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
-  <img src="https://img.shields.io/badge/-JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/-SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
-  <img src="https://img.shields.io/badge/-VITE-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-  <img src="https://img.shields.io/badge/-STORYBOOK-FF4785?style=for-the-badge&logo=storybook&logoColor=white" />
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/DESIGN%20SYSTEM-000000?style=for-the-badge&labelColor=333333&color=A020F0" />
-  <img src="https://img.shields.io/badge/ACCESSIBILITY-000000?style=for-the-badge&labelColor=333333&color=008080" />
-</p>
+  <br />
+  <div>
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass" />
+    <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+    <img src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest" />
+  </div>
+</div>
 
 ---
 
-## 🔥 Project Overview
+## ✨ Why Zenith UI?
 
-This is a comprehensive and modern User Interface (UI) component library, Zenith UI, designed to accelerate the development of high-quality, **accessible**, and responsive web applications.
+Zenith UI is not just another component library; it is a **premium design system** engineered to make your web applications look strictly professional. It combines robust React functionality with elegant SCSS-driven styling to offer an out-of-the-box stellar developer and user experience.
 
-The library focuses on delivering a complete **Design System**, emphasizing clean architecture, detailed documentation, and robust type safety to ensure a seamless developer experience.
+- **Premium Aesthetics**: Engineered with ultra-smooth micro-animations, tasteful drop shadows, and modern **glassmorphism** effects.
+- **27+ Production-Ready Components**: From foundational building blocks like `Box` to complex `Accordion`, `Tabs`, and `Drawer`.
+- **Robust Documentation**: Every single component is meticulously documented in **Storybook** with interactive controls.
+- **Highly Tested**: Rigorously tested using **Vitest** and **React Testing Library** to eliminate UI regressions.
+- **Theme Aware**: Integrated Light & Dark modes running purely on global SCSS variables and custom properties.
+- **Accessible (a11y)**: Built with strong respect for standard HTML semantics and ARIA traits.
 
-## 🔗 Core Engineering Focus
-
-Zenith UI is engineered based on modern frontend best practices, demonstrated by the following key principles:
-
-- **Atomic Component Design:** All components are built following the principles of Atomic Design, ensuring maximum reusability and maintainability across the entire system.
-- **React JavaScript-First Development:** The entire codebase is written in JavaScript, providing strong typing, enhanced IntelliSense, and significantly reducing runtime errors.
-- **Prop-Driven Styling:** Visual presentation is highly decoupled from component logic. Styling variations (size, variant, color) are dynamically managed based purely on component props.
-- **Professional Documentation (Storybook):** Storybook is used to create a living, interactive style guide where every component variant, state, and prop is meticulously documented for visual regression testing and easy developer onboarding.
-- **Accessibility (A11y) Commitment:** Components are built with WAI-ARIA standards in mind, ensuring a positive experience for users relying on assistive technologies.
+---
 
 ## 🚀 Getting Started
 
-Install Zenith UI using npm or yarn:
+Zenith UI is designed to be easily cloneable and usable as a starting ground for your own enterprise products.
 
 ```bash
-    npm install
-    # or yarn
+# 1. Clone the repository
+git clone https://github.com/DorukhanBekdur/zenith-ui-kit.git
+
+# 2. Navigate to project directory
+cd zenith-ui-kit
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the interactive Storybook dashboard
+npm run storybook
 ```
 
-## 🧩 Component Showcase
+---
 
-Zenith UI provides a robust set of ready-to-use components, categorized for easy navigation.
+## 🧩 Component Arsenal
 
-| Category       | Components                                  | Description                            |
-| :------------- | :------------------------------------------ | :------------------------------------- |
-| **Actions**    | `Button`, `IconButton`, `Link`              | Interactive elements for user actions. |
-| **Data Entry** | `Input`, `Select`, `Checkbox`, `RadioGroup` | Forms and data collection components.  |
-| **Feedback**   | `Alert`, `Snackbar`, `Progress`, `Spinner`  | Notifying users about system status.   |
-| **Layout**     | `Grid`, `Stack`, `Card`, `Container`        | Tools for structuring the interface.   |
-| **Navigation** | `Tabs`, `Sidebar`, `Breadcrumbs`            | Guiding users through the application. |
+Zenith UI ships with a highly diverse set of interface pieces natively.
 
-For a full list of components and their documentation, visit our [Storybook Documentation Link](https://zenith-ui-ecvczxiu5-dorukhan-bekdurs-projects.vercel.app)
+| Category | Components | Description |
+| :--- | :--- | :--- |
+| **Actions** | `Button`, `IconButton`, `Link` | Interactive elements to execute actions or navigation. |
+| **Data Entry** | `Input`, `Select`, `Checkbox`, `Radio`, `Switch`, `Textarea` | Highly polished forms and selection controls. |
+| **Feedback** | `Alert`, `Snackbar`, `Progress`, `Skeleton`, `Tooltip` | Graceful loading states and user notifications. |
+| **Display & Layout**| `Box`, `Card`, `Table`, `Stack`, `Avatar`, `Typography` | Data presentation and dimensional structure utilities. |
+| **Navigation** | `Tabs`, `Accordion`, `Breadcrumbs`, `Pagination`, `Drawer`, `Modal` | Intuitive way-finding and overlay solutions. |
 
-## 🎨 Customization & Theming
+---
 
-Zenith UI is highly customizable and designed to integrate seamlessly with your brand identity. We offer multiple layers of customization:
+## 💡 Showcase Usage
 
-- **Global Theme Overrides:** Easily override the default design tokens (colors, typography, spacing, breakpoints) by passing a custom theme object to the `ThemeProvider` component. This affects all instances of every component globally.
-- **SCSS Variables (Advanced):** If you are consuming the raw SCSS files, you can modify global SCSS variables before importing the library's main styles to change the fundamental look and feel across the entire system at the CSS level.
-- **Component Overrides (`sx` Prop):** For local, one-off style adjustments that do not require global changes, every component supports a special style prop (e.g., `sx` or `css` depending on the styling solution) allowing you to inject custom styles directly.
+Zenith UI utilizes `prop-driven` styling, allowing you to manipulate aesthetics without writing custom CSS.
 
-### Usage Example 💡
-
-You can import and use any component directly in your React application:
-
-**1. Basic User Form Example (Input & Button):**
-
-```jsx
-import React from "react";
-import { Button, Card, Input } from "zenith-ui";
-
-function UserProfile() {
-  return (
-    <Card title="User Settings" shadow="lg">
-      <Input label="Email" placeholder="user@example.com" />
-      <Button variant="primary" size="lg" style={{ marginTop: "15px" }}>
-        Save Changes
-      </Button>
-    </Card>
-  );
-}
-```
-
-**2. Alert and Link Example (Feedback & Action)::**
-
-```jsx
-import React from "react";
-import { Alert, Link } from "zenith-ui";
-
-function DashboardNotification() {
-  return (
-    <Alert variant="warning" title="License Expiring">
-      Your subscription will expire in 3 days.
-      <Link href="/billing" underline>
-        Update your billing details.
-      </Link>
-    </Alert>
-  );
-}
-```
-
-**3. Data Entry with Select (Forms)::**
-
+### **Glassmorphism Modal Example**
 ```jsx
 import React, { useState } from "react";
-import { Select } from "zenith-ui";
+import { Button, Modal, Typography } from "zenith-ui";
 
-function LanguageSelector() {
-  const [lang, setLang] = useState("en");
-
-  const options = [
-    { value: "tr", label: "Turkish" },
-    { value: "en", label: "English" },
-  ];
+export function Settings() {
+  const [open, setOpen] = useState(false);
 
   return (
-    <Select
-      label="Select Language"
-      options={options}
-      value={lang}
-      onChange={(e) => setLang(e.target.value)}
-    />
+    <>
+      <Button variant="primary" onClick={() => setOpen(true)}>Open Settings</Button>
+      <Modal open={open} onClose={() => setOpen(false)} title="System Preferences">
+        <Typography variant="body1">
+          Adjust your account details inside this premium frosted-glass modal overlay.
+        </Typography>
+      </Modal>
+    </>
   );
 }
 ```
 
-## 🛠️ Development & Contribution
+---
 
-We enthusiastically welcome contributions from the community!
+## 🧪 Testing
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/DorukhanBekdur/zenith-ui-kit.git](https://github.com/DorukhanBekdur/zenith-ui-kit.git)
-    cd zenith-ui-kit
-    ```
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    # or yarn
-    ```
-3.  **Run Storybook (Development Server):**
-    ```bash
-    npm run storybook
-    # This will open the documentation playground at http://localhost:6006
-    ```
+We value high-quality engineering. The project contains a comprehensive suite of unit and integration tests covering the core logic of UI components. Run tests anytime via:
+
+```bash
+npm run test
+```
+
+---
 
 ## 📄 License & Contact
 
-This project is licensed under the **MIT License**.
+This project is open-sourced under the **MIT License**.
 
-For major issues or business inquiries, please contact the lead maintainer:
-
-- **Maintainer:** DorukhanBekdur
-- **Email:** dorukhanbekdur@gmail.com
-
----
+- **Maintainer**: Dorukhan Bekdur
+- **GitHub**: [@DorukhanBekdur](https://github.com/DorukhanBekdur)
+- **Email**: dorukhanbekdur@gmail.com

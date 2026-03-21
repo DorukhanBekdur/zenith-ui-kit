@@ -8,18 +8,29 @@ export const Input = ({
   onChange,
   type = "text",
   error,
+  variant = "outlined",
+  size = "md",
+  className,
   ...props
 }) => {
-  const inputClass = error
-    ? `${styles.input} ${styles.errorInput}`
-    : styles.input;
+  const containerClasses = [
+    styles.inputWrapper,
+    styles[size],
+    className
+  ].filter(Boolean).join(" ");
+
+  const inputClasses = [
+    styles.input,
+    styles[variant],
+    error ? styles.errorInput : ""
+  ].filter(Boolean).join(" ");
 
   return (
-    <div className={styles.inputWrapper}>
+    <div className={containerClasses}>
       {label && <label className={styles.label}>{label}</label>}
       <input
         type={type}
-        className={inputClass}
+        className={inputClasses}
         placeholder={placeholder}
         value={value}
         onChange={onChange}

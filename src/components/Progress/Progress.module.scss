@@ -1,0 +1,55 @@
+@use "../../styles/variables" as *;
+
+.linear {
+  width: 100%;
+  
+  .track {
+    height: 8px;
+    background-color: var(--zenith-border);
+    border-radius: $zenith-border-radius-full;
+    overflow: hidden;
+  }
+
+  .indicator {
+    height: 100%;
+    background-color: $zenith-color-primary;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &.sm .track { height: 4px; }
+  &.lg .track { height: 12px; }
+}
+
+.circular {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  .svg {
+    transform: rotate(-90deg);
+  }
+
+  .track {
+    stroke: var(--zenith-border);
+  }
+
+  .indicator {
+    stroke: $zenith-color-primary;
+    transition: stroke-dashoffset 0.3s ease-in-out;
+  }
+
+  .label {
+    position: absolute;
+    font-size: $zenith-font-size-xs;
+    font-weight: $zenith-font-weight-bold;
+    color: $zenith-color-text-main;
+  }
+
+  &.sm { width: 32px; height: 32px; .label { display: none; } }
+  &.md { width: 48px; height: 48px; }
+  &.lg { width: 64px; height: 64px; .label { font-size: $zenith-font-size-sm; } }
+}
+
+.primary .indicator { background-color: $zenith-color-primary; stroke: $zenith-color-primary; }
+.secondary .indicator { background-color: $zenith-color-secondary; stroke: $zenith-color-secondary; }

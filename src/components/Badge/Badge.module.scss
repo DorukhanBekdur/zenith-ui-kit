@@ -4,39 +4,41 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: $zenith-spacing-xs $zenith-spacing-sm;
+  padding: 2px 8px;
+  font-family: $zenith-font-family;
+  font-size: $zenith-font-size-xs;
+  font-weight: $zenith-font-weight-semibold;
+  border-radius: $zenith-border-radius-sm;
+  white-space: nowrap;
+}
+
+.pill {
   border-radius: $zenith-border-radius-full;
-  font-size: $zenith-font-size-sm;
-  font-weight: $zenith-font-weight-bold;
-  line-height: 1;
-  font-family: "Inter", sans-serif;
-
-  & > *:not(:last-child) {
-    margin-right: $zenith-spacing-xs;
-  }
+  padding: 2px 10px;
 }
 
-.default {
-  background-color: $zenith-color-secondary;
-  color: $zenith-color-white;
-}
-
+// Variants (Solid & Subtle)
 .primary {
-  background-color: $zenith-color-primary;
-  color: $zenith-color-white;
+  background-color: var(--zenith-primary-subtle);
+  color: $zenith-color-primary;
 }
 
 .success {
-  background-color: $zenith-color-success;
-  color: $zenith-color-white;
+  background-color: #d1fae5;
+  color: #065f46;
 }
 
 .warning {
-  background-color: $zenith-color-warning;
-  color: $zenith-color-text;
+  background-color: #fef3c7;
+  color: #92400e;
 }
 
 .error {
-  background-color: $zenith-color-error;
-  color: $zenith-color-white;
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.neutral {
+  background-color: #f1f5f9;
+  color: #475569;
 }

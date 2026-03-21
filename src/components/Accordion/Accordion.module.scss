@@ -1,0 +1,62 @@
+@use "../../styles/variables" as *;
+
+.accordion {
+  border: 1px solid $zenith-color-border;
+  border-radius: $zenith-border-radius-md;
+  overflow: hidden;
+  background-color: var(--zenith-bg);
+}
+
+.item {
+  border-bottom: 1px solid $zenith-color-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $zenith-spacing-md;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $zenith-color-text-main;
+  font-family: $zenith-font-family;
+  font-weight: $zenith-font-weight-semibold;
+  transition: background-color $zenith-transition-fast;
+
+  &:hover {
+    background-color: var(--zenith-border);
+  }
+}
+
+.chevron {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: $zenith-color-text-muted;
+}
+
+.open .chevron {
+  transform: rotate(180deg);
+  color: $zenith-color-primary;
+}
+
+.contentWrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.open .contentWrapper {
+  max-height: 500px; // Arbitrary large value
+}
+
+.content {
+  padding: 0 $zenith-spacing-md $zenith-spacing-md $zenith-spacing-md;
+  color: $zenith-color-text-muted;
+  font-size: $zenith-font-size-md;
+  line-height: 1.6;
+}

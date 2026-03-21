@@ -1,0 +1,43 @@
+@use "../../styles/variables" as *;
+
+.snackbar {
+  position: fixed;
+  bottom: $zenith-spacing-xl;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: $zenith-spacing-sm $zenith-spacing-lg;
+  border-radius: $zenith-border-radius-md;
+  display: flex;
+  align-items: center;
+  gap: $zenith-spacing-md;
+  box-shadow: $zenith-shadow-lg;
+  z-index: $zenith-zindex-snackbar;
+  min-width: 300px;
+  max-width: 90vw;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.info { background-color: $zenith-color-secondary; }
+.success { background-color: $zenith-color-success; }
+.error { background-color: $zenith-color-error; }
+.warning { background-color: $zenith-color-warning; }
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-left: auto;
+  opacity: 0.8;
+  transition: $zenith-transition-fast;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from { transform: translate(-50%, 20px); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}

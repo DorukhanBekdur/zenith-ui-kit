@@ -22,7 +22,7 @@ describe("Button Component Tests", () => {
   it("should be disabled when the disabled prop is true", () => {
     const labelText = "Bekle";
     render(<Button label={labelText} disabled={true} />);
-    const buttonElement = screen.getByText(labelText);
+    const buttonElement = screen.getByRole("button", { name: labelText });
     expect(buttonElement).toBeDisabled();
   });
 });

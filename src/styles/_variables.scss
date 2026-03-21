@@ -1,31 +1,103 @@
-// Colors
-$zenith-color-primary: #007bff;
-$zenith-color-secondary: #6c757d;
-$zenith-color-success: #28a745;
-$zenith-color-warning: #ffc107;
-$zenith-color-error: #dc3545;
-$zenith-color-text: #212529;
-$zenith-color-light: #f8f9fa;
-$zenith-color-white: #ffffff;
-
-// Spacing
-$zenith-spacing-xs: 4px;
-$zenith-spacing-sm: 8px;
-$zenith-spacing-md: 16px;
-$zenith-spacing-lg: 24px;
-
-// Border Radius
-$zenith-border-radius-sm: 2px;
-$zenith-border-radius: 4px;
-$zenith-border-radius-md: 8px;
-$zenith-border-radius-lg: 12px;
-$zenith-border-radius-full: 90%;
-
-// Font Size
-$zenith-font-size-sm: 0.75rem;
+// Design Tokens - SASS Aliases for internal use
+$zenith-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$zenith-font-size-xs: 0.75rem;
+$zenith-font-size-sm: 0.875rem;
 $zenith-font-size-md: 1rem;
-$zenith-font-size-lg: 1.25rem;
+$zenith-font-size-lg: 1.125rem;
+$zenith-font-size-xl: 1.25rem;
+$zenith-font-weight-normal: 400;
+$zenith-font-weight-medium: 500;
+$zenith-font-weight-semibold: 600;
 $zenith-font-weight-bold: 700;
 
+$zenith-spacing-3xs: 2px;
+$zenith-spacing-2xs: 4px;
+$zenith-spacing-xs: 8px;
+$zenith-spacing-sm: 12px;
+$zenith-spacing-md: 16px;
+$zenith-spacing-lg: 24px;
+$zenith-spacing-xl: 32px;
+$zenith-spacing-2xl: 48px;
+
+$zenith-border-radius-sm: 4px;
+$zenith-border-radius-md: 8px;
+$zenith-border-radius-lg: 12px;
+$zenith-border-radius-xl: 16px;
+$zenith-border-radius-full: 9999px;
+
+$zenith-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$zenith-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$zenith-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$zenith-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+$zenith-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+$zenith-transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// Theme Variables
+:root {
+  --zenith-primary: #6366f1;
+  --zenith-primary-dark: #4f46e5;
+  --zenith-primary-subtle: #e0e7ff;
+  --zenith-secondary: #0f172a;
+  --zenith-secondary-hover: #1e293b;
+  --zenith-success: #10b981;
+  --zenith-warning: #f59e0b;
+  --zenith-error: #ef4444;
+  --zenith-text-main: #1e293b;
+  --zenith-text-muted: #64748b;
+  --zenith-bg: #f8fafc;
+  --zenith-white: #ffffff;
+  --zenith-border: #e2e8f0;
+  --zenith-card-bg: #ffffff;
+  --zenith-glass-bg: rgba(255, 255, 255, 0.7);
+  --zenith-glass-border: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] {
+  --zenith-primary: #818cf8;
+  --zenith-primary-dark: #6366f1;
+  --zenith-primary-subtle: #312e81;
+  --zenith-secondary: #f8fafc;
+  --zenith-secondary-hover: #e2e8f0;
+  --zenith-success: #34d399;
+  --zenith-warning: #fbbf24;
+  --zenith-error: #f87171;
+  --zenith-text-main: #f1f5f9;
+  --zenith-text-muted: #94a3b8;
+  --zenith-bg: #0f172a;
+  --zenith-white: #1e293b;
+  --zenith-border: #334155;
+  --zenith-card-bg: #1e293b;
+  --zenith-glass-bg: rgba(15, 23, 42, 0.7);
+  --zenith-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+// SASS Variable Mappings to CSS Variables
+$zenith-color-primary: var(--zenith-primary);
+$zenith-color-primary-dark: var(--zenith-primary-dark);
+$zenith-color-primary-subtle: var(--zenith-primary-subtle);
+$zenith-color-secondary: var(--zenith-secondary);
+$zenith-color-secondary-hover: var(--zenith-secondary-hover);
+$zenith-color-success: var(--zenith-success);
+$zenith-color-warning: var(--zenith-warning);
+$zenith-color-error: var(--zenith-error);
+$zenith-color-text-main: var(--zenith-text-main);
+$zenith-color-text-muted: var(--zenith-text-muted);
+$zenith-color-bg: var(--zenith-bg);
+$zenith-color-white: var(--zenith-white);
+$zenith-color-border: var(--zenith-border);
+$zenith-color-card-bg: var(--zenith-card-bg);
+$zenith-glass-bg: var(--zenith-glass-bg);
+$zenith-glass-border: var(--zenith-glass-border);
+
 // Z-Index
-$zenith-zindex-modal: 1050;
+$zenith-z-index-modal: 1050;
+$zenith-z-index-popover: 1060;
+$zenith-z-index-tooltip: 1070;
+$zenith-z-index-snackbar: 1080;
+$zenith-z-index-drawer: 1090;
+
+// Legacy aliases (optional)
+$zenith-zindex-modal: $zenith-z-index-modal;
+$zenith-zindex-tooltip: $zenith-z-index-tooltip;
+$zenith-zindex-snackbar: $zenith-z-index-snackbar;

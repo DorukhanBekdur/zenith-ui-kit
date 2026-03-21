@@ -1,0 +1,57 @@
+@use "../../styles/variables" as *;
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $zenith-color-border;
+  color: $zenith-color-text-main;
+  font-family: $zenith-font-family;
+  font-weight: $zenith-font-weight-bold;
+  overflow: hidden;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.circle { border-radius: 50%; }
+.square { border-radius: $zenith-border-radius-md; }
+
+// Sizes
+.xs { width: 24px; height: 24px; font-size: 0.625rem; }
+.sm { width: 32px; height: 32px; font-size: $zenith-font-size-xs; }
+.md { width: 40px; height: 40px; font-size: $zenith-font-size-md; }
+.lg { width: 56px; height: 56px; font-size: $zenith-font-size-xl; }
+.xl { width: 80px; height: 80px; font-size: 2rem; }
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.initials {
+  line-height: 1;
+}
+
+.avatarGroup {
+  display: inline-flex;
+  flex-direction: row-reverse; // For stacking effect where the first one is on top
+  justify-content: flex-end;
+
+  .avatar {
+    border: 2px solid var(--zenith-bg);
+    margin-left: -12px;
+    transition: transform $zenith-transition-fast;
+
+    &:hover {
+      transform: translateY(-4px);
+      z-index: 10;
+    }
+  }
+}
+
+.extra {
+  background-color: $zenith-color-secondary;
+  color: white;
+  font-size: $zenith-font-size-xs;
+}

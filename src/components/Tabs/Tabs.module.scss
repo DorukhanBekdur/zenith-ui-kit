@@ -1,0 +1,51 @@
+@use "../../styles/variables" as *;
+
+.tabsContainer {
+  width: 100%;
+  font-family: $zenith-font-family;
+}
+
+.tabList {
+  display: flex;
+  border-bottom: 2px solid $zenith-color-border;
+  position: relative;
+  margin-bottom: $zenith-spacing-md;
+}
+
+.tabTrigger {
+  flex: 1;
+  padding: $zenith-spacing-sm $zenith-spacing-md;
+  border: none;
+  background: none;
+  color: $zenith-color-text-muted;
+  font-weight: $zenith-font-weight-medium;
+  cursor: pointer;
+  transition: color $zenith-transition-normal;
+  font-size: $zenith-font-size-md;
+
+  &:hover {
+    color: $zenith-color-text-main;
+  }
+
+  &.active {
+    color: $zenith-color-primary;
+  }
+}
+
+.indicator {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  background-color: $zenith-color-primary;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tabContent {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
